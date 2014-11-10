@@ -10,10 +10,17 @@
   height: 100%;
   width: 100%;
 }
+input {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  z-index: 100;
+}
 </style>
 </head>
 <body>
 <div id="map"></div>
+<input type="range" min=0 max=6 step=1 value=0>
 <script src="bundle.js"></script>
 </body>
 </html>
