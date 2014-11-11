@@ -4,7 +4,7 @@ var centuries = [1300, 1400, 1500, 1600, 1700, 1800, 1900]
   , tileProxy = "hapsburgs.dx.artsmia.org:3245"
   , layerUrls = centuries.map(function(year) { return "//"+tileProxy+"/assets/tiles/wdh-"+year+"/{z}/{x}/{y}.png" })
   , layers = layerUrls.map(function(url) { 
-      return L.tileLayer(url, {maxZoom: 6, minZoom: 5})
+      return L.tileLayer(url, {maxZoom: 7, minZoom: 3})
     })
 
 var map = L.map('map').setView([47.197178, 13.73291], 5)
