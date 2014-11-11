@@ -1,8 +1,8 @@
 var leaflet = require('leaflet')
 
 var centuries = [1300, 1400, 1500, 1600, 1700, 1800, 1900]
-  , tileUrl = "static.habsburger.net/assets/tiles/wdh-%d/{z}/{x}/{y}.png"
-  , layerUrls = centuries.map(function(year) { return "//10.1.4.95:3245/assets/tiles/wdh-"+year+"/{z}/{x}/{y}.png" })
+  , tileProxy = "hapsburgs.dx.artsmia.org:3245"
+  , layerUrls = centuries.map(function(year) { return "//"+tileProxy+"/assets/tiles/wdh-"+year+"/{z}/{x}/{y}.png" })
   , layers = layerUrls.map(function(url) { 
       return L.tileLayer(url, {maxZoom: 6, minZoom: 5})
     })
